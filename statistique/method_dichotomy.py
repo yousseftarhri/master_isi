@@ -8,12 +8,12 @@ def dichotomy(f, a, b, epsilon):
     b (float): The ending point of the interval.
     epsilon (float): The tolerance for convergence; the algorithm stops when the interval width is less than epsilon.
 
-    Returns:
+    Returns :
     float: The estimated root of the function.
     """
     while b - a > epsilon:
         m = (a + b) / 2
-        if f(a) * f(b) > 0:
+        if f(a) * f(m) > 0:
             a = m
         else:
             b = m
